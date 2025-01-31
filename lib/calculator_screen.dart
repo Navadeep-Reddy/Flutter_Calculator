@@ -198,7 +198,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
 }
 
 Color getColor(value){
-  return [Btn.del, Btn.clr].contains(value)? Colors.blueGrey: [Btn.per, Btn.multiply, Btn.add, Btn.subtract, Btn.divide, Btn.calculate].contains(value)? Colors.deepOrange: Colors.black;
+  return [Btn.del, Btn.clr].contains(value)? Colors.brown: [Btn.per, Btn.multiply, Btn.add, Btn.subtract, Btn.divide, Btn.calculate].contains(value)? Color(0xFF611313): Colors.black;
 }
 
 

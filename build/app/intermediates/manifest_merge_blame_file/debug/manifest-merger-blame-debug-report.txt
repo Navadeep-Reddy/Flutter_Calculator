@@ -53,7 +53,7 @@
 39-->[androidx.core:core:1.13.1] /home/navadeep/.gradle/caches/transforms-3/889ae3adf7a24645889ee22f4dad2cac/transformed/core-1.13.1/AndroidManifest.xml:28:18-86
 40        android:debuggable="true"
 41        android:extractNativeLibs="true"
-42        android:icon="@mipmap/ic_launcher"
+42        android:icon="@mipmap/launcher_icon"
 43        android:label="calc" >
 44        <activity
 45            android:name="com.example.calc.MainActivity"

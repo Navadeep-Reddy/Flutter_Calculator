@@ -78,14 +78,107 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       ),
     );
   }
+
   void onBtnTap(String value) {
+    if (value == Btn.del){
+      delete();
+    }
+    if (value == Btn.clr){
+      clear();
+    }
+    if (value == Btn.per){
+      convertToPercentage();
+    }
+    if (value == Btn.calculate){
+      calculate();
+    }
+
+    appendValue(value);
+}
+
+  void calculate(){
+    if (number1.isEmpty || number2.isEmpty || operand.isEmpty) return;
+
+    var num1 = double.parse(number1);
+    var num2 = double.parse(number2);
+    double result = 0.0;
+
+    switch(operand){
+      case Btn.add:
+        result = num1 + num2;
+        break;
+      case Btn.subtract:
+        result = num1 - num2;
+        break;
+      case Btn.multiply:
+        result = num1 * num2;
+        break;
+      case Btn.divide:
+        result = num1 / num2;
+        break;
+      default:
+        result = 0;
+    }
+    number1 = "$result";
+    if (number1.endsWith(".0")){
+      number1 = number1.substring(0, number1.length - 2);
+    }
+    setState(() {
+      number1;
+      operand = "";
+      number2 = "";
+    });
+  }
+
+  void convertToPercentage(){
+    if (number1.isNotEmpty && number2.isNotEmpty && operand.isNotEmpty){
+      //calculate function call 
+
+      //convert 
+    }
+
+    if (operand.isNotEmpty){
+      //cannot be converted
+      return;
+    }
+
+    final number = double.parse(number1);
+    setState(() {
+      number1 = "${number / 100}";
+      number2 = "";
+      operand = "";
+    });
+  }
+
+
+
+  void delete(){
+    if (number2.isNotEmpty){
+      number2 = number2.substring(0, number2.length - 1);
+    }
+    else if (operand.isNotEmpty){
+      operand = "";
+    }
+    else{
+      number1 = number1.substring(0, number1.length - 1);
+    }
+  }
+
+  void clear(){
+    number1 = "";
+    number2 = "";
+    operand = "";
+  }
+
+  void appendValue(String value){
     // checking if something other than . or not any of the numbers
     if (value!= Btn.dot && int.tryParse(value) == null){
       
       if (operand.isNotEmpty && number2.isNotEmpty){
         // later for when we have data
       }
-      operand = value;
+      if (value != Btn.del && value != Btn.clr && value != Btn.per && value != Btn.calculate) operand = value;
+
     }else if (number1.isEmpty || operand.isEmpty) {
       if (value == Btn.dot && number1.contains(Btn.dot)) return; //do nothing if number1 already has a dot
       if (value == Btn.dot && (number1.isEmpty || number1 == Btn.n0)){
@@ -100,11 +193,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       number2 += value;
 
     }
-    setState(() {   // Remove the = sign
-
-    });
-  
-}
+    setState(() {});
+  }
 }
 
 Color getColor(value){

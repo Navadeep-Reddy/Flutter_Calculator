@@ -79,10 +79,32 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     );
   }
   void onBtnTap(String value) {
-    setState(() {   // Remove the = sign
+    // checking if something other than . or not any of the numbers
+    if (value!= Btn.dot && int.tryParse(value) == null){
+      
+      if (operand.isNotEmpty && number2.isNotEmpty){
+        // later for when we have data
+      }
+      operand = value;
+    }else if (number1.isEmpty || operand.isEmpty) {
+      if (value == Btn.dot && number1.contains(Btn.dot)) return; //do nothing if number1 already has a dot
+      if (value == Btn.dot && (number1.isEmpty || number1 == Btn.n0)){
+        value = '0.';
+      }
       number1 += value;
+    }else if (number2.isEmpty || operand.isNotEmpty) {
+      if (value == Btn.dot && number2.contains(Btn.dot)) return; //do nothing if number1 already has a dot
+      if (value == Btn.dot && (number2.isEmpty || number2 == Btn.n0)){
+        value = '0.';
+      }
+      number2 += value;
+
+    }
+    setState(() {   // Remove the = sign
+
     });
-  }
+  
+}
 }
 
 Color getColor(value){

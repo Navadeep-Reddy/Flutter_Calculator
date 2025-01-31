@@ -1,0 +1,12 @@
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/calc
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/navadeep/Documents/Projects/Flutter_Calculator/build/linux/x64/debug/bundle/data/flutter_assets/version.json
